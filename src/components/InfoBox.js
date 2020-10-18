@@ -5,11 +5,10 @@ export default function InfoBox(props) {
     console.log(props.text);
     return(
         <div>
-            This component will display title, date, and text from NASA API
-            <h2>{`Title: ${title}`}</h2>
-            <p>{`Date: ${date}`}</p>
-            <p>{`Text: ${text}`}</p>
-            <p>{ copyright && `Copyright: ${copyright}`}</p>
+            <h2>{title}</h2>
+            <p>{date}</p>
+            <p>{text}</p>
+            <p>{copyright && `Copyright: ${copyright}`}</p>
         </div>
     )
 }

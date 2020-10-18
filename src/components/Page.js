@@ -5,22 +5,21 @@ import Main from './Main';
 import Footer from './Footer';
 import moment from 'moment';
 
+const today = new Date();
+const dateQuery = "&date=" + moment(today).format("YYYY-MM-DD");
+
 export default function Page() {
     const [data, setData] = useState({});
-    const [queryDate, setQueryDate] = useState('');
+    const [queryDate, setQueryDate] = useState(dateQuery);
 
     const handleChange = (date) =>{
-        console.log("change date" + date);
-        setQueryDate(date);
-    }
-    const updateData = (newDateQuery) =>  {
-        const queryDate = moment(newDateQuery).format("YYYY-MM-DD");
-        const queryStr = "&date=" + queryDate;
-        console.log(queryStr);
+        console.log("change date " + date);
+        const newQueryDate = moment(date).format("YYYY-MM-DD");
+        const queryStr = "&date=" + newQueryDate;
         setQueryDate(queryStr);
-    };
+       console.log(queryDate) ;
+    }
     
-   
     useEffect( () => {
         console.log("set up api call here");
         axios
@@ -29,13 +28,13 @@ export default function Page() {
                 setData(response.data);
             })
             .catch(err => console.log(err.response));
-    }, []
+    }, [queryDate]
     );
     console.log(data);
     return(
         <>
             <Header />
-            <Main nasaData={data} handleChange={handleChange} updateData={updateData}/>
+            <Main nasaData={data} handleChange={handleChange} />
             <Footer />  
            
         </>

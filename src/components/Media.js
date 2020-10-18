@@ -4,7 +4,7 @@ export default function Media(props) {
     const {mediaType, src} = props;
     console.log(src);
     return (
-        <div> This component will render the returned image or video
+        <div> 
             <p>{`Media Type: ${mediaType}`}</p>
             {
                 mediaType === 'image'? 
