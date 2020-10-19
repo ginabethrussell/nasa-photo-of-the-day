@@ -43,7 +43,10 @@ code {
 
 .image {
   width: 45%;
-  min-width: 500px;
+  max-width: 500px;
+}
+.image img {
+  max-width: 450px;
 }
 .image h2 {
   font-size: 3rem;

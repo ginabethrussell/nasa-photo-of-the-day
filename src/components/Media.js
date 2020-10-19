@@ -1,5 +1,4 @@
 import React from 'react';
-import { Player } from 'video-react';
 
 
 export default function Media(props) {
@@ -10,7 +9,7 @@ export default function Media(props) {
             <h2>{title}</h2>
             {
                 mediaType === 'image'? 
-                    <img src={src} width="420"/> : 
+                    <img src={src} max-width="100%"/> : 
                     <iframe width="420" height="315"
                     src={src + "?autoplay=1&mute=1"}>
                     </iframe>      
