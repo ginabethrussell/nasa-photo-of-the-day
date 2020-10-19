@@ -1,14 +1,12 @@
 import React from 'react';
 
 export default function InfoBox(props) {
-    const {title, date, text, copyright} = props;
+    const {date, text} = props;
     console.log(props.text);
     return(
-        <div>
-            <h2>{title}</h2>
-            <p>{date}</p>
+        <div className="infoBox">
+            <p className="date">{date}</p>
             <p>{text}</p>
-            <p>{copyright && `Copyright: ${copyright}`}</p>
         </div>
     )
 }

@@ -1,16 +1,21 @@
 import React from 'react';
+import { Player } from 'video-react';
+
 
 export default function Media(props) {
-    const {mediaType, src} = props;
-    console.log(src);
+    const {mediaType, title, src, copyright} = props;
+  
     return (
-        <div> 
-            <p>{`Media Type: ${mediaType}`}</p>
+        <div className='image'> 
+            <h2>{title}</h2>
             {
                 mediaType === 'image'? 
-                    <img src={src} /> : `No image available`
+                    <img src={src} width="420"/> : 
+                    <iframe width="420" height="315"
+                    src={src + "?autoplay=1&mute=1"}>
+                    </iframe>      
             }
-            {`Media Source" ${src}`}
+           <p>{copyright && `Copyright: ${copyright}`}</p>
         </div>
     )
 }

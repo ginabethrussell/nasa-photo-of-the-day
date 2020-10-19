@@ -32,11 +32,10 @@ export default function Page() {
     );
     console.log(data);
     return(
-        <>
+        <div className='page'>
             <Header />
             <Main nasaData={data} handleChange={handleChange} />
-            <Footer />  
-           
-        </>
+            <Footer />      
+        </div>
     )
 }
