@@ -1,0 +1,4 @@
+[build]
+base = "nasa-photo-of-the-day/"
+publish = "nasa-photo-of-the-day/build/"
+command = "yarn build"
