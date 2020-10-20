@@ -36,11 +36,14 @@ const ImageDivP = styled.p`
 export default function Media(props) {
     const {mediaType, title, src, copyright} = props;
   // Receives data from Main as props
+    if (!src) return <h3>Loading...</h3>;
+    
     return (
         <ImageDiv> 
             <ImageDivH2>{title}</ImageDivH2>
 
             {/* Create conditional render for image or video */}
+            
             {
                 mediaType === 'image'? 
                     <ImageDivImg src={src} max-width="100%"/> : 
