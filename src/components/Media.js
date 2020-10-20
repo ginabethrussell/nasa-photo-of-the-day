@@ -10,29 +10,44 @@ const ImageDiv = styled.div`
         max-width: 600px;
     }
 `;
+const ImageDivH2 = styled.h2`
+    font-size: 3rem;
+    margin-bottom: 25px;`
+;
 
  const ImageDivImg = styled.img`
     margin: 0 auto;
     width: 100%;
     max-width: 600px;
  `;
+
+ const MediaIframe = styled.iframe`
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    @media(max-width: 800px){
+        height: 450px;
+    }`;
+const ImageDivP = styled.p`
+    font-size: 1.8rem;
+    `;
 export default function Media(props) {
     const {mediaType, title, src, copyright} = props;
   // Receives data from Main as props
     return (
         <ImageDiv> 
-            <h2>{title}</h2>
+            <ImageDivH2>{title}</ImageDivH2>
 
             {/* Create conditional render for image or video */}
             {
                 mediaType === 'image'? 
                     <ImageDivImg src={src} max-width="100%"/> : 
-                    <iframe width="420" height="315"
+                    <MediaIframe width="100%"
                     src={src + "?autoplay=1&mute=1"}>
-                    </iframe>      
+                    </MediaIframe>      
             }
             {/*Create conditional render if data contains copyright value - not null */}
-           <p>{copyright && `Copyright: ${copyright}`}</p>
+           <ImageDivP>{copyright && `Copyright: ${copyright}`}</ImageDivP>
         </ImageDiv>
     )
 }

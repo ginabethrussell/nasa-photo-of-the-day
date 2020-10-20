@@ -2,7 +2,25 @@ import React, {useState} from 'react';
 // imported datepicker and datepicker css
 import DatePicker from "react-datepicker"; 
 import "react-datepicker/dist/react-datepicker.css";
+import styled from 'styled-components';
 
+const DateSelectorDiv = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 50px; 
+`;
+const DateSelectorH3 = styled.h3`
+    font-size: 2rem;
+    margin-right: 1.6rem;
+ `;
+const DateSelectorP = styled.p`
+  width: 80%;
+  text-align: center;
+  font-size: 1.8rem;
+`;
 export default function DateSelector(props) {
     const {handleChange} = props;
     //Create today's date for DatePicker selected value
@@ -11,8 +29,8 @@ export default function DateSelector(props) {
     const [validDate, setValidDate] = useState(true);
     
     return (
-      <div className='dateSelector'>
-        <h3>Select a Date: </h3>
+      <DateSelectorDiv>
+        <DateSelectorH3>Select a Date: </DateSelectorH3>
         {/* imported component and styling
         onChange passes in date selected
         conditional checks to see if date is valid
@@ -27,10 +45,10 @@ export default function DateSelector(props) {
           }
         }} />
         {/* Conditional render for message or error message */}
-        <p className="validDate">
+        <DateSelectorP>
           { validDate? 'Choose any date between June 1, 1995 and today.': 
         'Date must be before today. No future data is available.'}
-        </p>
-      </div>
+        </DateSelectorP>
+      </DateSelectorDiv>
   );      
 }
