@@ -17,7 +17,7 @@ export default function Page() {
         const newQueryDate = moment(date).format("YYYY-MM-DD");
         const queryStr = "&date=" + newQueryDate;
         setQueryDate(queryStr);
-       console.log(queryDate) ;
+        console.log(queryDate);
     }
     
     useEffect( () => {

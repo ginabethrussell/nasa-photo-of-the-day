@@ -28,7 +28,7 @@ code {
   align-items: center;
   height: 100px;
   width: 100%;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
 }
 .header img {
   height: 75px;
@@ -71,6 +71,7 @@ code {
 }
 .dateSelector {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -79,6 +80,11 @@ code {
 .dateSelector h3 {
   font-size: 2rem;
   margin-right: 1.6rem;
+}
+.validDate {
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
 }
 .footer {
   font-size: 2rem;
