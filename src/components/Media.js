@@ -11,6 +11,8 @@ const ImageDiv = styled.div`
     }
 `;
 const ImageDivH2 = styled.h2`
+    width: 75%;
+    margin: 0 auto;
     font-size: 3rem;
     margin-bottom: 25px;`
 ;
