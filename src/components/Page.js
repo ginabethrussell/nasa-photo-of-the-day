@@ -31,7 +31,7 @@ export default function Page() {
     
     // Create useEffect function to handle API call
     // Set to execute on page component mount and when queryData state changes
-    // key = 93HIdg6dILvLH6B3N38HAFAhLyTE2s9BauFO8Mof
+
     useEffect( () => {
         console.log("set up api call here");
         axios
