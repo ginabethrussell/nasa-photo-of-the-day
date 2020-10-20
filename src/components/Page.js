@@ -43,7 +43,7 @@ export default function Page() {
     useEffect( () => {
         console.log("set up api call here");
         axios
-            .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY" + queryDate)
+            .get("https://api.nasa.gov/planetary/apod?api_key=93HIdg6dILvLH6B3N38HAFAhLyTE2s9BauFO8Mof" + queryDate)
             .then(response => {
                 setData(response.data);
             })
