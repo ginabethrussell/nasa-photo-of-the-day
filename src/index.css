@@ -17,4 +17,5 @@ code {
 }
 .react-datepicker-wrapper input {
   font-size: 1.6rem;
+  touch-action: manipulation;
 }
