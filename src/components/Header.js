@@ -28,6 +28,10 @@ const HeaderH1 = styled.h1`
     font-size: 2.2rem;
     text-align: center;
     padding-right: 20px;
+    @media (max-width: 500px){
+        width: 75%;
+        margin: 0 auto;
+    }
     `;
 
 export default function Header() {
