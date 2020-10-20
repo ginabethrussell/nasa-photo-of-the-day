@@ -33,11 +33,10 @@ const ImageDivH2 = styled.h2`
 const ImageDivP = styled.p`
     font-size: 1.8rem;
     `;
-export default function Media(props) {
-    const {mediaType, title, src, copyright} = props;
+export default function Media(props) { 
   // Receives data from Main as props
-    if (!src) return <h3>Loading...</h3>;
-    
+  const {mediaType, title, src, copyright} = props;
+
     return (
         <ImageDiv> 
             <ImageDivH2>{title}</ImageDivH2>
