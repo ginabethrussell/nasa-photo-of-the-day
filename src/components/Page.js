@@ -1,25 +1,36 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from 'axios'; // used for HTTP GET request
+import moment from 'moment'; // used to reformat date for api query
+
+// Import three rendered components
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
-import moment from 'moment';
 
+// Set up initial date query for api call
 const today = new Date();
 const dateQuery = "&date=" + moment(today).format("YYYY-MM-DD");
 
 export default function Page() {
+    // Create state for api data object
     const [data, setData] = useState({});
+    // Create state for queryDate value
     const [queryDate, setQueryDate] = useState(dateQuery);
 
+    // statehandler for date query, passed as props to DateSelector component
     const handleChange = (date) =>{
         console.log("change date " + date);
+        // reformat date
         const newQueryDate = moment(date).format("YYYY-MM-DD");
+        // build query string
         const queryStr = "&date=" + newQueryDate;
+        // update state
         setQueryDate(queryStr);
         console.log(queryDate);
     }
     
+    // Create useEffect function to handle API call
+    // Set to execute on page component mount and when queryData state changes
     useEffect( () => {
         console.log("set up api call here");
         axios
