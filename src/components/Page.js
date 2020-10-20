@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'; // used for HTTP GET request
 import moment from 'moment'; // used to reformat date for api query
+import styled from 'styled-components';
 
 // Import three rendered components
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
+
+// Set up CSS for Page component 
+const PageDiv = styled.div`
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+`;
 
 // Set up initial date query for api call
 const today = new Date();
@@ -44,10 +52,10 @@ export default function Page() {
     );
     console.log(data);
     return(
-        <div className='page'>
+        <PageDiv>
             <Header />
             <Main nasaData={data} handleChange={handleChange} />
             <Footer />      
-        </div>
+        </PageDiv>
     )
 }
