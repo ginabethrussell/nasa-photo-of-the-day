@@ -4,6 +4,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import styled from 'styled-components';
 
+// Use styled components to write CSS for Date Selector Component
 const DateSelectorDiv = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -25,13 +26,13 @@ export default function DateSelector(props) {
     const {handleChange} = props;
     //Create today's date for DatePicker selected value
     const date = new Date();
-    // Create state to hold whether date picked is valid ( is not in the future)
+    // Create state to hold whether date picked is valid (is not in the future)
     const [validDate, setValidDate] = useState(true);
     
     return (
       <DateSelectorDiv>
         <DateSelectorH3>Select a Date: </DateSelectorH3>
-        {/* imported component and styling
+        {/* imported component and styling for DatePicker
         onChange passes in date selected
         conditional checks to see if date is valid
         if valid, passes date to handleChange to create a new query in Page component

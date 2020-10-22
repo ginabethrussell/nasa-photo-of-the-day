@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// Use styled-components to write CSS for Header Component
 const HeaderDiv = styled.div`
     background-color: black;
     color: white;
@@ -24,6 +25,7 @@ const HeaderImg = styled.img`
     @media(max-width: 500px){
         height: 100px;
     }`;
+    
 const HeaderH1 = styled.h1`
     font-size: 2.2rem;
     text-align: center;

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 
+// Use styled components to write CSS for Media Component
 const ImageDiv = styled.div`
     width: 45%;
     max-width: 400px;
@@ -33,7 +34,8 @@ const ImageDivH2 = styled.h2`
 const ImageDivP = styled.p`
     font-size: 1.8rem;
     `;
-export default function Media(props) { 
+    
+export default function Media(props) {
   // Receives data from Main as props
   const {mediaType, title, src, copyright} = props;
 

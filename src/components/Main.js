@@ -1,9 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
+
 import Media from './Media';
 import InfoBox from './InfoBox';
 import DateSelector from './DateSelector';
-import styled from 'styled-components';
 
+// Use styled components to write CSS for Main Component
 const MainDiv = styled.div`
     width: 100%;
     max-width: 960px;
@@ -26,7 +28,7 @@ export default function Main({nasaData, handleChange}) {
     return (
         <MainDiv>
            <Media title={nasaData.title} src={nasaData.url} mediaType={nasaData.media_type} copyright={nasaData.copyright}/>
-           <InfoBox title={nasaData.title} date={nasaData.date} text={nasaData.explanation} />
+           <InfoBox date={nasaData.date} text={nasaData.explanation} />
            <DateSelector handleChange={handleChange} />
         </MainDiv>
     )
