@@ -28,21 +28,18 @@ export default function Page() {
 
     // statehandler for date query, passed as props to DateSelector component
     const handleChange = (date) =>{
-        console.log("change date " + date);
         // reformat date
         const newQueryDate = moment(date).format("YYYY-MM-DD");
         // build query string
         const queryStr = "&date=" + newQueryDate;
         // update state
         setQueryDate(queryStr);
-        console.log(queryDate);
     }
     
     // Create useEffect function to handle API call
     // Set to execute on page component mount and when queryData state changes
 
     useEffect( () => {
-        console.log("set up api call here");
         axios
             .get("https://api.nasa.gov/planetary/apod?api_key=93HIdg6dILvLH6B3N38HAFAhLyTE2s9BauFO8Mof" + queryDate)
             .then(response => {
@@ -51,7 +48,7 @@ export default function Page() {
             .catch(err => console.log(err.response));
     }, [queryDate]
     );
-    console.log(data);
+    
     return(
         <PageDiv>
             <Header />
