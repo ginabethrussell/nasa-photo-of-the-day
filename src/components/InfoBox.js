@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
+
+// Use styled components to write CSS for InfoBox Component
 const InfoBoxDiv = styled.div`
     margin-top: 1.6rem;
     padding-left: 20px;

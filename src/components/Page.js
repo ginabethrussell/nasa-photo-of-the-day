@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'; // used for HTTP GET request
 import moment from 'moment'; // used to reformat date for api query
+// used library for css styling written as components
 import styled from 'styled-components';
 
-// Import three rendered components
+// Import three components to render
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';

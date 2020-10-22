@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// Use styled components to create CSS for Footer Component
 const FooterDiv = styled.div`
     background-color: black;
     color: white;
