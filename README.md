@@ -114,3 +114,18 @@ Follow these steps for completing your project.
 ----
 
  ## Part II - [Advanced Styling Techniques](DAY_TWO_README.md)
+
+## Deployed with Netlify
+
+[NASA Astronomy Picture of the Day](https://nasa-pod-react.netlify.app/)
+
+#Log of deployment steps
+
+- created a netlify-deploy branch to attempt deployment
+- removed empty DOM-I directory
+- changed build command to CI= npm run build 
+
+[Netlify Community Support](https://community.netlify.com/t/netlify-not-building-command-failed-with-exit-code-1-npm-run-build/16999)
+
+- added a _redirects file to correct 404 error from netlify
+[Stack Overflow](https://stackoverflow.com/questions/58065603/netlify-renders-404-on-page-refresh-using-react-and-react-router)
